@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/easybtn"
         android:layout_width="219dp"
         android:layout_height="61dp"
         android:layout_marginStart="8dp"
@@ -18,31 +18,31 @@
         android:layout_marginBottom="56dp"
         android:background="#FFFFFF"
         android:text="Easy"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/mediumbtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/mediumbtn"
         android:layout_width="0dp"
         android:layout_height="61dp"
         android:layout_marginBottom="68dp"
         android:background="#FFFFFF"
         android:text="Medium"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/hardbtn"
+        app:layout_constraintEnd_toEndOf="@+id/easybtn"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/button" />
+        app:layout_constraintStart_toStartOf="@+id/easybtn" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/hardbtn"
         android:layout_width="0dp"
         android:layout_height="61dp"
         android:layout_marginBottom="64dp"
         android:background="#FFFFFF"
         android:text="Hard"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="@+id/easybtn"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/button" />
+        app:layout_constraintStart_toStartOf="@+id/easybtn" />
 </android.support.constraint.ConstraintLayout>
