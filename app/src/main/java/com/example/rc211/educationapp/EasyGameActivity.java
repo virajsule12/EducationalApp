@@ -1,19 +1,14 @@
 package com.example.rc211.educationapp;
 
-import android.animation.Animator;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.os.Handler;
-import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.animation.AccelerateInterpolator;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import java.util.ArrayList;
 
 public class EasyGameActivity extends AppCompatActivity {
 
@@ -61,14 +56,14 @@ public class EasyGameActivity extends AppCompatActivity {
     private void moveAnswers() {
         final Handler handler = new Handler();
 
-        final ImageView circle1 = (ImageView) findViewById(R.id.circlee1);
-        final ImageView circle2 = (ImageView) findViewById(R.id.circlee2);
-        final ImageView circle3 = (ImageView) findViewById(R.id.circlee3);
+        final ImageView circle1 = (ImageView) findViewById(R.id.circlem1);
+        final ImageView circle2 = (ImageView) findViewById(R.id.circlem2);
+        final ImageView circle3 = (ImageView) findViewById(R.id.circlem3);
 
         final Runnable r = new Runnable() {
             public void run() {
                 if (lives > 0) {
-                    final TextView equation = (TextView) findViewById(R.id.eEquation);
+                    final TextView equation = (TextView) findViewById(R.id.mEquation);
                     final TextView ans1 = (TextView) findViewById(R.id.easyans1);
                     final TextView ans2 = (TextView) findViewById(R.id.easyans2);
                     final TextView ans3 = (TextView) findViewById(R.id.easyans3);
@@ -81,7 +76,6 @@ public class EasyGameActivity extends AppCompatActivity {
                     ans1Correct = false;
                     ans2Correct = false;
                     ans3Correct = false;
-                    System.out.println("aOrs: " + aOrs);
                     if (aOrs == 0) {//0 is addition
                         correctAns = num1 + num2;
                         equation.setText(num1 + " + " + num2 + " = ?");
@@ -97,11 +91,15 @@ public class EasyGameActivity extends AppCompatActivity {
                     }
                     answers[temp] = correctAns;
 //
-//                for(int i=0;i<3;i++){
-//                    for (int j=0;j<3;j++){
-//                       if (answers[i] =)
-//                    }
-//                }
+                for(int i=0;i<3;i++){
+                    if(answers[i] == correctAns && i!= temp){
+                        while(answers[i] == correctAns){
+                            answers[i] = (int) ((Math.random()*51)-10);
+                            System.out.println("changing from correct");
+                        }
+                    }
+
+                }
 
                     if (temp == 0) {
                         ans1Correct = true;
@@ -178,7 +176,7 @@ public class EasyGameActivity extends AppCompatActivity {
                     handler.postDelayed(this, 4750);
                 }
                 else{
-                    final TextView equation = (TextView) findViewById(R.id.eEquation);
+                    final TextView equation = (TextView) findViewById(R.id.mEquation);
                     equation.setText("GAME OVER");
                 }
             }
@@ -195,11 +193,11 @@ public class EasyGameActivity extends AppCompatActivity {
 
 
     private void handleButtons(){
-        Button btn1 = (Button) findViewById(R.id.easybtn1);
-        Button btn2 = (Button) findViewById(R.id.easybtn2);
-        Button btn3 = (Button) findViewById(R.id.easybtn3);
-        final TextView scoretxt = (TextView) findViewById(R.id.easyScore);
-        final TextView livestxt = (TextView) findViewById(R.id.easyLives);
+        Button btn1 = (Button) findViewById(R.id.mediumbtn1);
+        Button btn2 = (Button) findViewById(R.id.mediumbtn2);
+        Button btn3 = (Button) findViewById(R.id.mediumbtn3);
+        final TextView scoretxt = (TextView) findViewById(R.id.mediumScore);
+        final TextView livestxt = (TextView) findViewById(R.id.mediumLives);
 
 
 
@@ -223,7 +221,7 @@ public class EasyGameActivity extends AppCompatActivity {
                 scoretxt.setText("Score: " + score);
                 livestxt.setText("Lives: " + lives);
                 if (lives==0){
-                    final TextView equation = (TextView) findViewById(R.id.eEquation);
+                    final TextView equation = (TextView) findViewById(R.id.mEquation);
                     equation.setText("GAME OVER");
                 }
             }
@@ -249,7 +247,7 @@ public class EasyGameActivity extends AppCompatActivity {
                 scoretxt.setText("Score: " + score);
                 livestxt.setText("Lives: " + lives);
                 if (lives==0){
-                    final TextView equation = (TextView) findViewById(R.id.eEquation);
+                    final TextView equation = (TextView) findViewById(R.id.mEquation);
                     equation.setText("GAME OVER");
                 }
             }
@@ -275,7 +273,7 @@ public class EasyGameActivity extends AppCompatActivity {
                 scoretxt.setText("Score: " + score);
                 livestxt.setText("Lives: " + lives);
                 if (lives==0){
-                    final TextView equation = (TextView) findViewById(R.id.eEquation);
+                    final TextView equation = (TextView) findViewById(R.id.mEquation);
                     equation.setText("GAME OVER");
                 }
             }

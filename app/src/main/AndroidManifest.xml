@@ -16,7 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".EasyGameActivity"></activity>
+        <activity android:name=".EasyGameActivity" />
+        <activity android:name=".MediumGameActivity" />
+        <activity android:name=".HardGameActivity"></activity>
     </application>
 
 </manifest>
