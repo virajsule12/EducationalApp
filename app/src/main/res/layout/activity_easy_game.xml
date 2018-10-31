@@ -5,18 +5,185 @@
     android:id="@+id/easylayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".EasyGameActivity">
 
+    <ImageView
+        android:id="@+id/circlee1"
+        android:layout_width="0dp"
+        android:layout_height="102dp"
+        android:layout_marginBottom="44dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/circlee2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/circle" />
+
+    <ImageView
+        android:id="@+id/circlee2"
+        android:layout_width="107dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/circlee1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/circlee1"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/circle" />
+
+    <ImageView
+        android:id="@+id/circlee3"
+        android:layout_width="102dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/circlee2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/circlee2"
+        app:layout_constraintTop_toTopOf="@+id/circlee2"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/circle" />
+
     <Button
-        android:id="@+id/testbtn"
+        android:id="@+id/easybtn1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/Transparent"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/circlee1"
+        app:layout_constraintEnd_toEndOf="@+id/circlee1"
+        app:layout_constraintStart_toStartOf="@+id/circlee1"
+        app:layout_constraintTop_toTopOf="@+id/circlee1" />
+
+    <Button
+        android:id="@+id/easybtn2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/Transparent"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/circlee2"
+        app:layout_constraintEnd_toEndOf="@+id/circlee2"
+        app:layout_constraintStart_toStartOf="@+id/circlee2"
+        app:layout_constraintTop_toTopOf="@+id/circlee2" />
+
+    <Button
+        android:id="@+id/easybtn3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/Transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/circlee3"
+        app:layout_constraintEnd_toEndOf="@+id/circlee3"
+        app:layout_constraintStart_toStartOf="@+id/circlee3"
+        app:layout_constraintTop_toTopOf="@+id/circlee3" />
+
+    <TextView
+        android:id="@+id/easyans1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="160dp"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/easybtn1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/easybtn1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/easyans2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="160dp"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/easybtn2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/easybtn2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/easyans3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="160dp"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/circlee3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/easybtn3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/eEquation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginRight="4dp"
-        android:layout_marginBottom="8dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/easyScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="28dp"
+        android:text="Score: 0"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/easyLives"
+        app:layout_constraintHorizontal_bias="0.225"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eEquation" />
+
+    <TextView
+        android:id="@+id/easyLives"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="96dp"
+        android:layout_marginRight="96dp"
+        android:text="Lives: 3"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/easyScore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/easyScore"
+        app:layout_constraintVertical_bias="0.0" />
 </android.support.constraint.ConstraintLayout>
