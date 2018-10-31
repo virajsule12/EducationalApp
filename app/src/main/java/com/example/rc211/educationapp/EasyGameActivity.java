@@ -222,6 +222,10 @@ public class EasyGameActivity extends AppCompatActivity {
                 }
                 scoretxt.setText("Score: " + score);
                 livestxt.setText("Lives: " + lives);
+                if (lives==0){
+                    final TextView equation = (TextView) findViewById(R.id.eEquation);
+                    equation.setText("GAME OVER");
+                }
             }
         });
 
@@ -244,6 +248,10 @@ public class EasyGameActivity extends AppCompatActivity {
                 }
                 scoretxt.setText("Score: " + score);
                 livestxt.setText("Lives: " + lives);
+                if (lives==0){
+                    final TextView equation = (TextView) findViewById(R.id.eEquation);
+                    equation.setText("GAME OVER");
+                }
             }
         });
 
@@ -266,6 +274,10 @@ public class EasyGameActivity extends AppCompatActivity {
                 }
                 scoretxt.setText("Score: " + score);
                 livestxt.setText("Lives: " + lives);
+                if (lives==0){
+                    final TextView equation = (TextView) findViewById(R.id.eEquation);
+                    equation.setText("GAME OVER");
+                }
             }
         });
     }
