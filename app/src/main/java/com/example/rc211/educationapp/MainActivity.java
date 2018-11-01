@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void handleMedium(){
-        Button easy = (Button) findViewById(R.id.easybtn);
+        Button easy = (Button) findViewById(R.id.mediumbtn);
         easy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void handleHard(){
-        Button easy = (Button) findViewById(R.id.easybtn);
+        Button easy = (Button) findViewById(R.id.hardbtn);
         easy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
