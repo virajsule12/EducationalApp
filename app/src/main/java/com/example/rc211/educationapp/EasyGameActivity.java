@@ -56,14 +56,14 @@ public class EasyGameActivity extends AppCompatActivity {
     private void moveAnswers() {
         final Handler handler = new Handler();
 
-        final ImageView circle1 = (ImageView) findViewById(R.id.circlem1);
-        final ImageView circle2 = (ImageView) findViewById(R.id.circlem2);
-        final ImageView circle3 = (ImageView) findViewById(R.id.circlem3);
+        final ImageView circle1 = (ImageView) findViewById(R.id.circlee1);
+        final ImageView circle2 = (ImageView) findViewById(R.id.circlee2);
+        final ImageView circle3 = (ImageView) findViewById(R.id.circlee3);
 
         final Runnable r = new Runnable() {
             public void run() {
                 if (lives > 0) {
-                    final TextView equation = (TextView) findViewById(R.id.mEquation);
+                    final TextView equation = (TextView) findViewById(R.id.eEquation);
                     final TextView ans1 = (TextView) findViewById(R.id.easyans1);
                     final TextView ans2 = (TextView) findViewById(R.id.easyans2);
                     final TextView ans3 = (TextView) findViewById(R.id.easyans3);
@@ -176,7 +176,7 @@ public class EasyGameActivity extends AppCompatActivity {
                     handler.postDelayed(this, 4750);
                 }
                 else{
-                    final TextView equation = (TextView) findViewById(R.id.mEquation);
+                    final TextView equation = (TextView) findViewById(R.id.eEquation);
                     equation.setText("GAME OVER");
                 }
             }
@@ -193,11 +193,11 @@ public class EasyGameActivity extends AppCompatActivity {
 
 
     private void handleButtons(){
-        Button btn1 = (Button) findViewById(R.id.mediumbtn1);
-        Button btn2 = (Button) findViewById(R.id.mediumbtn2);
-        Button btn3 = (Button) findViewById(R.id.mediumbtn3);
-        final TextView scoretxt = (TextView) findViewById(R.id.mediumScore);
-        final TextView livestxt = (TextView) findViewById(R.id.mediumLives);
+        Button btn1 = (Button) findViewById(R.id.easybtn1);
+        Button btn2 = (Button) findViewById(R.id.easybtn2);
+        Button btn3 = (Button) findViewById(R.id.easybtn3);
+        final TextView scoretxt = (TextView) findViewById(R.id.easyScore);
+        final TextView livestxt = (TextView) findViewById(R.id.easyLives);
 
 
 
@@ -221,7 +221,7 @@ public class EasyGameActivity extends AppCompatActivity {
                 scoretxt.setText("Score: " + score);
                 livestxt.setText("Lives: " + lives);
                 if (lives==0){
-                    final TextView equation = (TextView) findViewById(R.id.mEquation);
+                    final TextView equation = (TextView) findViewById(R.id.eEquation);
                     equation.setText("GAME OVER");
                 }
             }
@@ -247,7 +247,7 @@ public class EasyGameActivity extends AppCompatActivity {
                 scoretxt.setText("Score: " + score);
                 livestxt.setText("Lives: " + lives);
                 if (lives==0){
-                    final TextView equation = (TextView) findViewById(R.id.mEquation);
+                    final TextView equation = (TextView) findViewById(R.id.eEquation);
                     equation.setText("GAME OVER");
                 }
             }
@@ -273,7 +273,7 @@ public class EasyGameActivity extends AppCompatActivity {
                 scoretxt.setText("Score: " + score);
                 livestxt.setText("Lives: " + lives);
                 if (lives==0){
-                    final TextView equation = (TextView) findViewById(R.id.mEquation);
+                    final TextView equation = (TextView) findViewById(R.id.eEquation);
                     equation.setText("GAME OVER");
                 }
             }

@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
     public void handleMedium(){
         Button easy = (Button) findViewById(R.id.mediumbtn);
         easy.setOnClickListener(new View.OnClickListener() {

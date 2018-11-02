@@ -9,74 +9,74 @@
     tools:context=".EasyGameActivity">
 
     <ImageView
-        android:id="@+id/circlem1"
+        android:id="@+id/circlee1"
         android:layout_width="0dp"
         android:layout_height="102dp"
-        android:layout_marginBottom="44dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="44dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/circlem2"
+        app:layout_constraintEnd_toStartOf="@+id/circlee2"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/circle" />
 
     <ImageView
-        android:id="@+id/circlem2"
+        android:id="@+id/circlee2"
         android:layout_width="107dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/circlem1"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/circlee1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/circlem1"
+        app:layout_constraintTop_toTopOf="@+id/circlee1"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/circle" />
 
     <ImageView
-        android:id="@+id/circlem3"
+        android:id="@+id/circlee3"
         android:layout_width="102dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/circlem2"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/circlee2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/circlem2"
-        app:layout_constraintTop_toTopOf="@+id/circlem2"
+        app:layout_constraintStart_toEndOf="@+id/circlee2"
+        app:layout_constraintTop_toTopOf="@+id/circlee2"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/circle" />
 
     <Button
-        android:id="@+id/mediumbtn1"
+        android:id="@+id/easybtn1"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/Transparent"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="@+id/circlem1"
-        app:layout_constraintEnd_toEndOf="@+id/circlem1"
-        app:layout_constraintStart_toStartOf="@+id/circlem1"
-        app:layout_constraintTop_toTopOf="@+id/circlem1" />
+        app:layout_constraintBottom_toBottomOf="@+id/circlee1"
+        app:layout_constraintEnd_toEndOf="@+id/circlee1"
+        app:layout_constraintStart_toStartOf="@+id/circlee1"
+        app:layout_constraintTop_toTopOf="@+id/circlee1" />
 
     <Button
-        android:id="@+id/mediumbtn2"
+        android:id="@+id/easybtn2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/Transparent"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="@+id/circlem2"
-        app:layout_constraintEnd_toEndOf="@+id/circlem2"
-        app:layout_constraintStart_toStartOf="@+id/circlem2"
-        app:layout_constraintTop_toTopOf="@+id/circlem2" />
+        app:layout_constraintBottom_toBottomOf="@+id/circlee2"
+        app:layout_constraintEnd_toEndOf="@+id/circlee2"
+        app:layout_constraintStart_toStartOf="@+id/circlee2"
+        app:layout_constraintTop_toTopOf="@+id/circlee2" />
 
     <Button
-        android:id="@+id/mediumbtn3"
+        android:id="@+id/easybtn3"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
@@ -84,10 +84,10 @@
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
         android:background="@color/Transparent"
-        app:layout_constraintBottom_toBottomOf="@+id/circlem3"
-        app:layout_constraintEnd_toEndOf="@+id/circlem3"
-        app:layout_constraintStart_toStartOf="@+id/circlem3"
-        app:layout_constraintTop_toTopOf="@+id/circlem3" />
+        app:layout_constraintBottom_toBottomOf="@+id/circlee3"
+        app:layout_constraintEnd_toEndOf="@+id/circlee3"
+        app:layout_constraintStart_toStartOf="@+id/circlee3"
+        app:layout_constraintTop_toTopOf="@+id/circlee3" />
 
     <TextView
         android:id="@+id/easyans1"
@@ -101,9 +101,9 @@
         android:textColor="@color/black"
         android:textSize="30sp"
         android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="@+id/mediumbtn1"
+        app:layout_constraintEnd_toEndOf="@+id/easybtn1"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/mediumbtn1"
+        app:layout_constraintStart_toStartOf="@+id/easybtn1"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -118,9 +118,9 @@
         android:textColor="@color/black"
         android:textSize="30sp"
         android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="@+id/mediumbtn2"
+        app:layout_constraintEnd_toEndOf="@+id/easybtn2"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/mediumbtn2"
+        app:layout_constraintStart_toStartOf="@+id/easybtn2"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -135,13 +135,13 @@
         android:textColor="@color/black"
         android:textSize="30sp"
         android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="@+id/circlem3"
+        app:layout_constraintEnd_toEndOf="@+id/circlee3"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/mediumbtn3"
+        app:layout_constraintStart_toStartOf="@+id/easybtn3"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/mEquation"
+        android:id="@+id/eEquation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -157,7 +157,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/mediumScore"
+        android:id="@+id/easyScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -168,13 +168,13 @@
         android:text="Score: 0"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/mediumLives"
+        app:layout_constraintEnd_toStartOf="@+id/easyLives"
         app:layout_constraintHorizontal_bias="0.225"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mEquation" />
+        app:layout_constraintTop_toBottomOf="@+id/eEquation" />
 
     <TextView
-        android:id="@+id/mediumLives"
+        android:id="@+id/easyLives"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="96dp"
@@ -182,9 +182,9 @@
         android:text="Lives: 3"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/mediumScore"
+        app:layout_constraintBottom_toBottomOf="@+id/easyScore"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/mediumScore"
+        app:layout_constraintTop_toTopOf="@+id/easyScore"
         app:layout_constraintVertical_bias="0.0" />
 
 </android.support.constraint.ConstraintLayout>
