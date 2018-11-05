@@ -187,4 +187,101 @@
         app:layout_constraintTop_toTopOf="@+id/mediumScore"
         app:layout_constraintVertical_bias="0.0" />
 
+    <Button
+        android:id="@+id/mediumrestart"
+        android:layout_width="294dp"
+        android:layout_height="90dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circle"
+        android:text="Restart"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mediumend" />
+
+    <TextView
+        android:id="@+id/mediumend"
+        android:layout_width="0dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Score: "
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/mediumrestart"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/mediumrestart"
+        app:layout_constraintTop_toBottomOf="@+id/mediumgo" />
+
+    <TextView
+        android:id="@+id/mediumgo"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Game Over"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/mediumend"
+        app:layout_constraintStart_toStartOf="@+id/mediumend"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/mediummenu"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circle"
+        android:text="Main Menu"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/mediumrestart"
+        app:layout_constraintStart_toStartOf="@+id/mediumrestart"
+        app:layout_constraintTop_toBottomOf="@+id/mediumrestart" />
+
+    <TextView
+        android:id="@+id/mediumwrong"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        android:gravity="top|center"
+        android:text="Missed Questions:"
+        android:textColor="#FF0000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/mediummenu"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/mediummenu"
+        app:layout_constraintTop_toBottomOf="@+id/mediummenu" />
+
+    <TextView
+        android:id="@+id/mediumcorrect"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        android:gravity="top|center"
+        android:text="Corrections:"
+        android:textColor="#0000FF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/mediumwrong"
+        app:layout_constraintStart_toStartOf="@+id/mediumwrong"
+        app:layout_constraintTop_toBottomOf="@+id/mediumwrong" />
+
+
 </android.support.constraint.ConstraintLayout>

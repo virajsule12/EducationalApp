@@ -186,4 +186,101 @@
         app:layout_constraintTop_toTopOf="@+id/hardScore"
         app:layout_constraintVertical_bias="0.0" />
 
+    <Button
+        android:id="@+id/hardrestart"
+        android:layout_width="294dp"
+        android:layout_height="90dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circle"
+        android:text="Restart"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hardend" />
+
+    <TextView
+        android:id="@+id/hardend"
+        android:layout_width="0dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Score: "
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/hardrestart"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/hardrestart"
+        app:layout_constraintTop_toBottomOf="@+id/hardgo" />
+
+    <TextView
+        android:id="@+id/hardgo"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Game Over"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/hardend"
+        app:layout_constraintStart_toStartOf="@+id/hardend"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/hardmenu"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circle"
+        android:text="Main Menu"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/hardrestart"
+        app:layout_constraintStart_toStartOf="@+id/hardrestart"
+        app:layout_constraintTop_toBottomOf="@+id/hardrestart" />
+
+    <TextView
+        android:id="@+id/hardwrong"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        android:gravity="top|center"
+        android:text="Missed Questions:"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/hardmenu"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/hardmenu"
+        app:layout_constraintTop_toBottomOf="@+id/hardmenu" />
+
+    <TextView
+        android:id="@+id/hardcorrect"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        android:gravity="top|center"
+        android:text="Corrections:"
+        android:textColor="#0000FF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/hardwrong"
+        app:layout_constraintStart_toStartOf="@+id/hardwrong"
+        app:layout_constraintTop_toBottomOf="@+id/hardwrong" />
+
+
 </android.support.constraint.ConstraintLayout>
