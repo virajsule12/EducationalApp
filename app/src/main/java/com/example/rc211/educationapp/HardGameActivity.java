@@ -95,25 +95,25 @@ public class HardGameActivity extends AppCompatActivity {
 
                     int correctAns=0;
 
-                    if (aOrs ==0){
+                    if (aOrs ==0){//addition
                         num1 = (int) ((Math.random() * 10) + 1);
                         num2 = (int) ((Math.random() * 10) + 1);
                         correctAns = num1 + num2;
                         equation.setText(num1 + " + " + num2 + " = ?");
                     }
-                    else if(aOrs == 1){
+                    else if(aOrs == 1){//subtraction
                         num1 = (int) ((Math.random() * 10) + 1);
                         num2 = (int) ((Math.random() * 10) + 1);
                         correctAns = num1 - num2;
                         equation.setText(num1 + " - " + num2 + " = ?");
                     }
-                    else if(aOrs == 2){
+                    else if(aOrs == 2){//multiplicstion
                         num1 = (int) ((Math.random() * 10) + 1);
                         num2 = (int) ((Math.random() * 10) + 1);
                         correctAns = num1 * num2;
                         equation.setText(num1 + " * " + num2 + " = ?");
                     }
-                    else if (aOrs == 3){
+                    else if (aOrs == 3){//division
                         num2 = (int) ((Math.random() * 10) + 1);
                         correctAns = (int) ((Math.random() * 10) + 1);
                         num1 = num2 * correctAns;
