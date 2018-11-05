@@ -131,7 +131,7 @@ public class HardGameActivity extends AppCompatActivity {
                     int temp = (int) (Math.random() * 3);
 
                     for (int i = 0; i < 3; i++) {
-                        answers[i] = (int) ((Math.random() * 51) - 10);
+                        answers[i] = (int) ((Math.random() * 101) - 10);
                     }
                     answers[temp] = correctAns;
 

@@ -132,7 +132,7 @@ public class MediumGameActivity extends AppCompatActivity {
                     for(int i=0;i<3;i++){
                         if(answers[i] == correctAns && i!= temp){
                             while(answers[i] == correctAns){
-                                answers[i] = (int) ((Math.random()*51)-10);
+                                answers[i] = (int) ((Math.random()*101));
                                 System.out.println("changing from correct");
                             }
                         }
