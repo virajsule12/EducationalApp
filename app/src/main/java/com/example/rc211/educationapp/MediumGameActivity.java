@@ -80,6 +80,10 @@ public class MediumGameActivity extends AppCompatActivity {
                     btn2.setEnabled(true);
                     btn3.setEnabled(true);
 
+                    btn1.setVisibility(View.VISIBLE);
+                    btn2.setVisibility(View.VISIBLE);
+                    btn3.setVisibility(View.VISIBLE);
+
                     circle1.setImageResource(R.drawable.circle);
                     circle2.setImageResource(R.drawable.circle);
                     circle3.setImageResource(R.drawable.circle);
@@ -105,7 +109,7 @@ public class MediumGameActivity extends AppCompatActivity {
                     }
                     else if (aOrs == 1){
                         num2 = (int) ((Math.random() * 10) + 1);
-                        correctAns = (int) ((Math.random() * 10) + 1);
+                        correctAns = (int) ((Math.random() * 20) + 1);
                         num1 = num2 * correctAns;
                         equation.setText(num1 + " / " + num2 + " = ?");
 
@@ -125,14 +129,14 @@ public class MediumGameActivity extends AppCompatActivity {
                     int temp = (int) (Math.random() * 3);
 
                     for (int i = 0; i < 3; i++) {
-                        answers[i] = (int) ((Math.random() * 101));
+                        answers[i] = (int) ((Math.random() * 61));
                     }
                     answers[temp] = correctAns;
 
                     for(int i=0;i<3;i++){
                         if(answers[i] == correctAns && i!= temp){
                             while(answers[i] == correctAns){
-                                answers[i] = (int) ((Math.random()*101));
+                                answers[i] = (int) ((Math.random()*61));
                                 System.out.println("changing from correct");
                             }
                         }
@@ -171,7 +175,7 @@ public class MediumGameActivity extends AppCompatActivity {
                     potans3 = Integer.parseInt(ans3.getText().toString());
 
                     final ObjectAnimator anim1 = ObjectAnimator.ofFloat(ans1, "translationY", 1550f);
-                    anim1.setDuration(7000);
+                    anim1.setDuration(6000);
                     anim1.start();
 
                     anim1.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
@@ -199,7 +203,7 @@ public class MediumGameActivity extends AppCompatActivity {
                     });
 
                     final ObjectAnimator anim2 = ObjectAnimator.ofFloat(ans2, "translationY", 1550f);
-                    anim2.setDuration(7000);
+                    anim2.setDuration(6000);
                     anim2.start();
 
                     anim2.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
@@ -227,7 +231,7 @@ public class MediumGameActivity extends AppCompatActivity {
                     });
 
                     final ObjectAnimator anim3 = ObjectAnimator.ofFloat(ans3, "translationY", 1550f);
-                    anim3.setDuration(7000);
+                    anim3.setDuration(6000);
                     anim3.start();
 
                     anim3.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {

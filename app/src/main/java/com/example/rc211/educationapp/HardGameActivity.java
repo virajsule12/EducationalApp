@@ -71,13 +71,17 @@ public class HardGameActivity extends AppCompatActivity {
         final Button btn3 = (Button) findViewById(R.id.hardbtn3);
 
 
-
         final Runnable r = new Runnable() {
             public void run() {
                 if (lives > 0) {
                     btn1.setEnabled(true);
                     btn2.setEnabled(true);
                     btn3.setEnabled(true);
+
+                    btn1.setVisibility(View.VISIBLE);
+                    btn2.setVisibility(View.VISIBLE);
+                    btn3.setVisibility(View.VISIBLE);
+
 
                     circle1.setImageResource(R.drawable.circle);
                     circle2.setImageResource(R.drawable.circle);
@@ -131,14 +135,14 @@ public class HardGameActivity extends AppCompatActivity {
                     int temp = (int) (Math.random() * 3);
 
                     for (int i = 0; i < 3; i++) {
-                        answers[i] = (int) ((Math.random() * 101) - 10);
+                        answers[i] = (int) ((Math.random() * 41) - 10);
                     }
                     answers[temp] = correctAns;
 
                     for(int i=0;i<3;i++){
                         if(answers[i] == correctAns && i!= temp){
                             while(answers[i] == correctAns){
-                                answers[i] = (int) ((Math.random()*101)-20);
+                                answers[i] = (int) ((Math.random()*41)-20);
                                 System.out.println("changing from correct");
                             }
                         }
@@ -177,7 +181,7 @@ public class HardGameActivity extends AppCompatActivity {
                     potans3 = Integer.parseInt(ans3.getText().toString());
 
                     final ObjectAnimator anim1 = ObjectAnimator.ofFloat(ans1, "translationY", 1550f);
-                    anim1.setDuration(7000);
+                    anim1.setDuration(5000);
                     anim1.start();
 
                     anim1.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
@@ -205,7 +209,7 @@ public class HardGameActivity extends AppCompatActivity {
                     });
 
                     final ObjectAnimator anim2 = ObjectAnimator.ofFloat(ans2, "translationY", 1550f);
-                    anim2.setDuration(7000);
+                    anim2.setDuration(5000);
                     anim2.start();
 
                     anim2.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
@@ -233,7 +237,7 @@ public class HardGameActivity extends AppCompatActivity {
                     });
 
                     final ObjectAnimator anim3 = ObjectAnimator.ofFloat(ans3, "translationY", 1550f);
-                    anim3.setDuration(7000);
+                    anim3.setDuration(5000);
                     anim3.start();
 
                     anim3.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
