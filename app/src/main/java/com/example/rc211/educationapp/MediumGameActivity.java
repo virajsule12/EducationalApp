@@ -681,6 +681,7 @@ public class MediumGameActivity extends AppCompatActivity {
         });
     }
 
+    //takes back to main menu
     private void handleRestart(){
         final Button btn1 = (Button) findViewById(R.id.mediumbtn1);
         final Button btn2 = (Button) findViewById(R.id.mediumbtn2);
