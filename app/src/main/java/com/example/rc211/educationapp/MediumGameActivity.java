@@ -155,7 +155,7 @@ public class MediumGameActivity extends AppCompatActivity {
                     ans1.setVisibility(View.VISIBLE);
                     ans1.setText(answers[0] + "");
                     ans1.clearAnimation();
-                    ans1.setX(150);
+                    //ans1.setX(150);
                     ans1.setY(400);
                     potans1 = Integer.parseInt(ans1.getText().toString());
 
@@ -163,14 +163,14 @@ public class MediumGameActivity extends AppCompatActivity {
                     ans2.setVisibility(View.VISIBLE);
                     ans2.setText(answers[1] + "");
                     ans2.clearAnimation();
-                    ans2.setX(485);
+                    //ans2.setX(485);
                     ans2.setY(400);
                     potans2 = Integer.parseInt(ans2.getText().toString());
 
                     ans3.setVisibility(View.VISIBLE);
                     ans3.setText(answers[2] + "");
                     ans3.clearAnimation();
-                    ans3.setX(835);
+                    //ans3.setX(835);
                     ans3.setY(400);
                     potans3 = Integer.parseInt(ans3.getText().toString());
 

@@ -3,6 +3,7 @@ package com.example.rc211.educationapp;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.content.Intent;
+import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -161,7 +162,7 @@ public class HardGameActivity extends AppCompatActivity {
                     ans1.setVisibility(View.VISIBLE);
                     ans1.setText(answers[0] + "");
                     ans1.clearAnimation();
-                    ans1.setX(150);
+                    //ans1.setX(150);
                     ans1.setY(400);
                     potans1 = Integer.parseInt(ans1.getText().toString());
 
@@ -169,14 +170,14 @@ public class HardGameActivity extends AppCompatActivity {
                     ans2.setVisibility(View.VISIBLE);
                     ans2.setText(answers[1] + "");
                     ans2.clearAnimation();
-                    ans2.setX(485);
+                    //ans2.setX(485);
                     ans2.setY(400);
                     potans2 = Integer.parseInt(ans2.getText().toString());
 
                     ans3.setVisibility(View.VISIBLE);
                     ans3.setText(answers[2] + "");
                     ans3.clearAnimation();
-                    ans3.setX(835);
+                    //ans3.setX(835);
                     ans3.setY(400);
                     potans3 = Integer.parseInt(ans3.getText().toString());
 
@@ -306,6 +307,7 @@ public class HardGameActivity extends AppCompatActivity {
                 if (ans1Colliding){
                     if(ans1Correct){
                         System.out.println("colliding and correct");
+                        scoretxt.animate().scaleX(0f).scaleY(0f).setDuration(200).start();
                         score++;
                         circle1.setImageResource(R.drawable.correct);
                     }
@@ -403,6 +405,32 @@ public class HardGameActivity extends AppCompatActivity {
 
                 }
                 scoretxt.setText("Score: " + score);
+                new CountDownTimer(200, 1000) {
+
+                    public void onTick(long millisUntilFinished) {
+
+                    }
+
+                    public void onFinish() {
+                        scoretxt.animate().scaleX(2f).scaleY(2f).setDuration(200).start();
+                        new CountDownTimer(300, 1000) {
+
+                            public void onTick(long millisUntilFinished) {
+
+                            }
+
+                            public void onFinish() {
+                                scoretxt.animate().scaleX(1f).scaleY(1f).setDuration(200).start();
+
+                            }
+
+                        }.start();
+
+                    }
+
+                }.start();
+
+
                 livestxt.setText("Lives: " + lives);
                 if (lives==0){
                     gameOver = true;
