@@ -310,6 +310,9 @@ public class HardGameActivity extends AppCompatActivity {
                         scoretxt.animate().scaleX(0f).scaleY(0f).setDuration(200).start();
                         score++;
                         circle1.setImageResource(R.drawable.correct);
+//                       circle1.setAlpha(.5f);
+
+                        circle1.animate().scaleX(2f).scaleY(2f).setDuration(200).start();
                     }
                     else{
                         System.out.println("colliding and wrong");
