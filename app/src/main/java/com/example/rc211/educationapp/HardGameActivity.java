@@ -3,11 +3,14 @@ package com.example.rc211.educationapp;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.content.Intent;
+import android.media.Image;
 import android.os.CountDownTimer;
 import android.os.Handler;
+import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AccelerateInterpolator;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -87,6 +90,10 @@ public class HardGameActivity extends AppCompatActivity {
                     circle1.setImageResource(R.drawable.circle);
                     circle2.setImageResource(R.drawable.circle);
                     circle3.setImageResource(R.drawable.circle);
+
+                    circle1.setAlpha(1f);
+                    circle2.setAlpha(1f);
+                    circle3.setAlpha(1f);
                     final TextView equation = (TextView) findViewById(R.id.hEquation);
                     final TextView ans1 = (TextView) findViewById(R.id.hardans1);
                     final TextView ans2 = (TextView) findViewById(R.id.hardans2);
@@ -285,6 +292,7 @@ public class HardGameActivity extends AppCompatActivity {
         final ImageView circle2 = (ImageView) findViewById(R.id.circleh2);
         final ImageView circle3 = (ImageView) findViewById(R.id.circleh3);
 
+
         final TextView scoretxt = (TextView) findViewById(R.id.hardScore);
         final TextView livestxt = (TextView) findViewById(R.id.hardLives);
         final TextView equation = (TextView) findViewById(R.id.hEquation);
@@ -310,9 +318,21 @@ public class HardGameActivity extends AppCompatActivity {
                         scoretxt.animate().scaleX(0f).scaleY(0f).setDuration(200).start();
                         score++;
                         circle1.setImageResource(R.drawable.correct);
-//                       circle1.setAlpha(.5f);
+                        circle1.animate().scaleX(2f).scaleY(02f).setDuration(400).start();
 
-                        circle1.animate().scaleX(2f).scaleY(2f).setDuration(200).start();
+
+
+                        new CountDownTimer(400, 100) {
+
+                            public void onTick(long millisUntilFinished) {
+
+                            }
+
+                            public void onFinish() {
+                                circle1.animate().scaleX(1f).scaleY(1f).setDuration(200).start();
+                            }
+
+                        }.start();
                     }
                     else{
                         System.out.println("colliding and wrong");
