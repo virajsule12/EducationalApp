@@ -81,7 +81,7 @@ public class HardGameActivity extends AppCompatActivity {
                     btn1.setEnabled(true);
                     btn2.setEnabled(true);
                     btn3.setEnabled(true);
-
+//
                     btn1.setVisibility(View.VISIBLE);
                     btn2.setVisibility(View.VISIBLE);
                     btn3.setVisibility(View.VISIBLE);
