@@ -321,7 +321,6 @@ public class HardGameActivity extends AppCompatActivity {
                 if (ans1Colliding){
                     if(ans1Correct){
                         System.out.println("colliding and correct");
-                        scoretxt.animate().scaleX(0f).scaleY(0f).setDuration(200).start();
                         score++;
                         circle1.setImageResource(R.drawable.correct);
 
@@ -546,31 +545,6 @@ public class HardGameActivity extends AppCompatActivity {
 
                 }
                 scoretxt.setText("Score: " + score);
-                new CountDownTimer(200, 1000) {
-
-                    public void onTick(long millisUntilFinished) {
-
-                    }
-
-                    public void onFinish() {
-                        scoretxt.animate().scaleX(2f).scaleY(2f).setDuration(200).start();
-                        new CountDownTimer(300, 1000) {
-
-                            public void onTick(long millisUntilFinished) {
-
-                            }
-
-                            public void onFinish() {
-                                scoretxt.animate().scaleX(1f).scaleY(1f).setDuration(200).start();
-
-                            }
-
-                        }.start();
-
-                    }
-
-                }.start();
-
 
                 livestxt.setText("Lives: " + lives);
                 if (lives==0){
