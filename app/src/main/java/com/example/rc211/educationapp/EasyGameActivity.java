@@ -1,5 +1,7 @@
 package com.example.rc211.educationapp;
 
+import android.animation.Animator;
+import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.content.Intent;
@@ -277,6 +279,10 @@ public class EasyGameActivity extends AppCompatActivity {
         final ImageView circle2 = (ImageView) findViewById(R.id.circlee2);
         final ImageView circle3 = (ImageView) findViewById(R.id.circlee3);
 
+        final ImageView faded1 = (ImageView) findViewById(R.id.fadede1);
+        final ImageView faded2 = (ImageView) findViewById(R.id.fadede2);
+        final ImageView faded3 = (ImageView) findViewById(R.id.fadede3);
+
         final TextView scoretxt = (TextView) findViewById(R.id.easyScore);
         final TextView livestxt = (TextView) findViewById(R.id.easyLives);
         final TextView equation = (TextView) findViewById(R.id.eEquation);
@@ -301,6 +307,48 @@ public class EasyGameActivity extends AppCompatActivity {
                         System.out.println("colliding and correct");
                         score++;
                         circle1.setImageResource(R.drawable.correct);
+
+                        faded1.setVisibility(View.VISIBLE);
+                        faded1.setImageResource(R.drawable.correct);
+                        faded1.setAlpha(.75f);
+                        ObjectAnimator animX = ObjectAnimator.ofFloat(faded1, "scaleX", 3f);
+                        ObjectAnimator animY = ObjectAnimator.ofFloat(faded1, "scaleY", 3f);
+                        AnimatorSet animSetXY = new AnimatorSet();
+                        animSetXY.playTogether(animX, animY);
+                        animSetXY.setDuration(500);
+                        animSetXY.start();
+
+                        animX.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                            @Override
+                            public void onAnimationUpdate(ValueAnimator animation) {
+                                faded1.setAlpha(faded1.getAlpha() -.05f);
+                            }
+
+                        });
+
+                        animX.addListener(new Animator.AnimatorListener() {
+                            @Override
+                            public void onAnimationStart(Animator animation) {
+
+                            }
+
+                            @Override
+                            public void onAnimationEnd(Animator animation) {
+                                faded1.setVisibility(View.INVISIBLE);
+                                faded1.animate().scaleX(1f).scaleY(1f).setDuration(100).start();
+
+                            }
+
+                            @Override
+                            public void onAnimationCancel(Animator animation) {
+
+                            }
+
+                            @Override
+                            public void onAnimationRepeat(Animator animation) {
+
+                            }
+                        });
                     }
                     else{
                         System.out.println("colliding and wrong");
@@ -336,6 +384,48 @@ public class EasyGameActivity extends AppCompatActivity {
                         else if (operatorArr.get(operatorArr.size()-1).equals("-")){
                             correctansArr.add(num1wrongArr.get(num1wrongArr.size()-1) - num2wrongArr.get(num2wrongArr.size()-1));
                         }
+
+                        faded1.setVisibility(View.VISIBLE);
+                        faded1.setImageResource(R.drawable.wrong);
+                        faded1.setAlpha(.75f);
+                        ObjectAnimator animX = ObjectAnimator.ofFloat(faded1, "scaleX", 3f);
+                        ObjectAnimator animY = ObjectAnimator.ofFloat(faded1, "scaleY", 3f);
+                        AnimatorSet animSetXY = new AnimatorSet();
+                        animSetXY.playTogether(animX, animY);
+                        animSetXY.setDuration(500);
+                        animSetXY.start();
+
+                        animX.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                            @Override
+                            public void onAnimationUpdate(ValueAnimator animation) {
+                                faded1.setAlpha(faded1.getAlpha() -.05f);
+                            }
+
+                        });
+
+                        animX.addListener(new Animator.AnimatorListener() {
+                            @Override
+                            public void onAnimationStart(Animator animation) {
+
+                            }
+
+                            @Override
+                            public void onAnimationEnd(Animator animation) {
+                                faded1.setVisibility(View.INVISIBLE);
+                                faded1.animate().scaleX(1f).scaleY(1f).setDuration(100).start();
+
+                            }
+
+                            @Override
+                            public void onAnimationCancel(Animator animation) {
+
+                            }
+
+                            @Override
+                            public void onAnimationRepeat(Animator animation) {
+
+                            }
+                        });
 
                     }
                     if(ans2Correct){
@@ -380,6 +470,48 @@ public class EasyGameActivity extends AppCompatActivity {
                     else if (operatorArr.get(operatorArr.size()-1).equals("-")){
                         correctansArr.add(num1wrongArr.get(num1wrongArr.size()-1) - num2wrongArr.get(num2wrongArr.size()-1));
                     }
+
+                    faded1.setVisibility(View.VISIBLE);
+                    faded1.setImageResource(R.drawable.wrong);
+                    faded1.setAlpha(.75f);
+                    ObjectAnimator animX = ObjectAnimator.ofFloat(faded1, "scaleX", 3f);
+                    ObjectAnimator animY = ObjectAnimator.ofFloat(faded1, "scaleY", 3f);
+                    AnimatorSet animSetXY = new AnimatorSet();
+                    animSetXY.playTogether(animX, animY);
+                    animSetXY.setDuration(500);
+                    animSetXY.start();
+
+                    animX.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                        @Override
+                        public void onAnimationUpdate(ValueAnimator animation) {
+                            faded1.setAlpha(faded1.getAlpha() -.05f);
+                        }
+
+                    });
+
+                    animX.addListener(new Animator.AnimatorListener() {
+                        @Override
+                        public void onAnimationStart(Animator animation) {
+
+                        }
+
+                        @Override
+                        public void onAnimationEnd(Animator animation) {
+                            faded1.setVisibility(View.INVISIBLE);
+                            faded1.animate().scaleX(1f).scaleY(1f).setDuration(100).start();
+
+                        }
+
+                        @Override
+                        public void onAnimationCancel(Animator animation) {
+
+                        }
+
+                        @Override
+                        public void onAnimationRepeat(Animator animation) {
+
+                        }
+                    });
 
 
                 }
@@ -432,6 +564,48 @@ public class EasyGameActivity extends AppCompatActivity {
                         score++;
                         circle2.setImageResource(R.drawable.correct);
 
+                        faded2.setVisibility(View.VISIBLE);
+                        faded2.setImageResource(R.drawable.correct);
+                        faded2.setAlpha(.75f);
+                        ObjectAnimator animX = ObjectAnimator.ofFloat(faded2, "scaleX", 3f);
+                        ObjectAnimator animY = ObjectAnimator.ofFloat(faded2, "scaleY", 3f);
+                        AnimatorSet animSetXY = new AnimatorSet();
+                        animSetXY.playTogether(animX, animY);
+                        animSetXY.setDuration(500);
+                        animSetXY.start();
+
+                        animX.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                            @Override
+                            public void onAnimationUpdate(ValueAnimator animation) {
+                                faded2.setAlpha(faded2.getAlpha() -.05f);
+                            }
+
+                        });
+
+                        animX.addListener(new Animator.AnimatorListener() {
+                            @Override
+                            public void onAnimationStart(Animator animation) {
+
+                            }
+
+                            @Override
+                            public void onAnimationEnd(Animator animation) {
+                                faded2.setVisibility(View.INVISIBLE);
+                                faded2.animate().scaleX(1f).scaleY(1f).setDuration(100).start();
+
+                            }
+
+                            @Override
+                            public void onAnimationCancel(Animator animation) {
+
+                            }
+
+                            @Override
+                            public void onAnimationRepeat(Animator animation) {
+
+                            }
+                        });
+
                     }
                     else{
                         System.out.println("colliding and wrong");
@@ -468,6 +642,48 @@ public class EasyGameActivity extends AppCompatActivity {
                         else if (operatorArr.get(operatorArr.size()-1).equals("-")){
                             correctansArr.add(num1wrongArr.get(num1wrongArr.size()-1) - num2wrongArr.get(num2wrongArr.size()-1));
                         }
+
+                        faded2.setVisibility(View.VISIBLE);
+                        faded2.setImageResource(R.drawable.wrong);
+                        faded2.setAlpha(.75f);
+                        ObjectAnimator animX = ObjectAnimator.ofFloat(faded2, "scaleX", 3f);
+                        ObjectAnimator animY = ObjectAnimator.ofFloat(faded2, "scaleY", 3f);
+                        AnimatorSet animSetXY = new AnimatorSet();
+                        animSetXY.playTogether(animX, animY);
+                        animSetXY.setDuration(500);
+                        animSetXY.start();
+
+                        animX.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                            @Override
+                            public void onAnimationUpdate(ValueAnimator animation) {
+                                faded2.setAlpha(faded2.getAlpha() -.05f);
+                            }
+
+                        });
+
+                        animX.addListener(new Animator.AnimatorListener() {
+                            @Override
+                            public void onAnimationStart(Animator animation) {
+
+                            }
+
+                            @Override
+                            public void onAnimationEnd(Animator animation) {
+                                faded2.setVisibility(View.INVISIBLE);
+                                faded2.animate().scaleX(1f).scaleY(1f).setDuration(100).start();
+
+                            }
+
+                            @Override
+                            public void onAnimationCancel(Animator animation) {
+
+                            }
+
+                            @Override
+                            public void onAnimationRepeat(Animator animation) {
+
+                            }
+                        });
                     }
                     if(ans1Correct){
                         circle1.setImageResource(R.drawable.correct);
@@ -511,6 +727,48 @@ public class EasyGameActivity extends AppCompatActivity {
                     else if (operatorArr.get(operatorArr.size()-1).equals("-")){
                         correctansArr.add(num1wrongArr.get(num1wrongArr.size()-1) - num2wrongArr.get(num2wrongArr.size()-1));
                     }
+
+                    faded2.setVisibility(View.VISIBLE);
+                    faded2.setImageResource(R.drawable.wrong);
+                    faded2.setAlpha(.75f);
+                    ObjectAnimator animX = ObjectAnimator.ofFloat(faded2, "scaleX", 3f);
+                    ObjectAnimator animY = ObjectAnimator.ofFloat(faded2, "scaleY", 3f);
+                    AnimatorSet animSetXY = new AnimatorSet();
+                    animSetXY.playTogether(animX, animY);
+                    animSetXY.setDuration(500);
+                    animSetXY.start();
+
+                    animX.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                        @Override
+                        public void onAnimationUpdate(ValueAnimator animation) {
+                            faded2.setAlpha(faded2.getAlpha() -.05f);
+                        }
+
+                    });
+
+                    animX.addListener(new Animator.AnimatorListener() {
+                        @Override
+                        public void onAnimationStart(Animator animation) {
+
+                        }
+
+                        @Override
+                        public void onAnimationEnd(Animator animation) {
+                            faded2.setVisibility(View.INVISIBLE);
+                            faded2.animate().scaleX(1f).scaleY(1f).setDuration(100).start();
+
+                        }
+
+                        @Override
+                        public void onAnimationCancel(Animator animation) {
+
+                        }
+
+                        @Override
+                        public void onAnimationRepeat(Animator animation) {
+
+                        }
+                    });
                 }
                 scoretxt.setText("Score: " + score);
                 livestxt.setText("Lives: " + lives);
@@ -560,6 +818,48 @@ public class EasyGameActivity extends AppCompatActivity {
                         System.out.println("colliding and correct");
                         score++;
                         circle3.setImageResource(R.drawable.correct);
+
+                        faded3.setVisibility(View.VISIBLE);
+                        faded3.setImageResource(R.drawable.correct);
+                        faded3.setAlpha(.75f);
+                        ObjectAnimator animX = ObjectAnimator.ofFloat(faded3, "scaleX", 3f);
+                        ObjectAnimator animY = ObjectAnimator.ofFloat(faded3, "scaleY", 3f);
+                        AnimatorSet animSetXY = new AnimatorSet();
+                        animSetXY.playTogether(animX, animY);
+                        animSetXY.setDuration(500);
+                        animSetXY.start();
+
+                        animX.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                            @Override
+                            public void onAnimationUpdate(ValueAnimator animation) {
+                                faded3.setAlpha(faded3.getAlpha() -.05f);
+                            }
+
+                        });
+
+                        animX.addListener(new Animator.AnimatorListener() {
+                            @Override
+                            public void onAnimationStart(Animator animation) {
+
+                            }
+
+                            @Override
+                            public void onAnimationEnd(Animator animation) {
+                                faded3.setVisibility(View.INVISIBLE);
+                                faded3.animate().scaleX(1f).scaleY(1f).setDuration(100).start();
+
+                            }
+
+                            @Override
+                            public void onAnimationCancel(Animator animation) {
+
+                            }
+
+                            @Override
+                            public void onAnimationRepeat(Animator animation) {
+
+                            }
+                        });
                     }
                     else{
                         System.out.println("colliding and wrong");
@@ -596,6 +896,48 @@ public class EasyGameActivity extends AppCompatActivity {
                         else if (operatorArr.get(operatorArr.size()-1).equals("-")){
                             correctansArr.add(num1wrongArr.get(num1wrongArr.size()-1) - num2wrongArr.get(num2wrongArr.size()-1));
                         }
+
+                        faded3.setVisibility(View.VISIBLE);
+                        faded3.setImageResource(R.drawable.wrong);
+                        faded3.setAlpha(.75f);
+                        ObjectAnimator animX = ObjectAnimator.ofFloat(faded3, "scaleX", 3f);
+                        ObjectAnimator animY = ObjectAnimator.ofFloat(faded3, "scaleY", 3f);
+                        AnimatorSet animSetXY = new AnimatorSet();
+                        animSetXY.playTogether(animX, animY);
+                        animSetXY.setDuration(500);
+                        animSetXY.start();
+
+                        animX.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                            @Override
+                            public void onAnimationUpdate(ValueAnimator animation) {
+                                faded3.setAlpha(faded3.getAlpha() -.05f);
+                            }
+
+                        });
+
+                        animX.addListener(new Animator.AnimatorListener() {
+                            @Override
+                            public void onAnimationStart(Animator animation) {
+
+                            }
+
+                            @Override
+                            public void onAnimationEnd(Animator animation) {
+                                faded3.setVisibility(View.INVISIBLE);
+                                faded3.animate().scaleX(1f).scaleY(1f).setDuration(100).start();
+
+                            }
+
+                            @Override
+                            public void onAnimationCancel(Animator animation) {
+
+                            }
+
+                            @Override
+                            public void onAnimationRepeat(Animator animation) {
+
+                            }
+                        });
                     }
                     if(ans1Correct){
                         circle1.setImageResource(R.drawable.correct);
@@ -639,6 +981,48 @@ public class EasyGameActivity extends AppCompatActivity {
                     else if (operatorArr.get(operatorArr.size()-1).equals("-")){
                         correctansArr.add(num1wrongArr.get(num1wrongArr.size()-1) - num2wrongArr.get(num2wrongArr.size()-1));
                     }
+
+                    faded3.setVisibility(View.VISIBLE);
+                    faded3.setImageResource(R.drawable.wrong);
+                    faded3.setAlpha(.75f);
+                    ObjectAnimator animX = ObjectAnimator.ofFloat(faded3, "scaleX", 3f);
+                    ObjectAnimator animY = ObjectAnimator.ofFloat(faded3, "scaleY", 3f);
+                    AnimatorSet animSetXY = new AnimatorSet();
+                    animSetXY.playTogether(animX, animY);
+                    animSetXY.setDuration(500);
+                    animSetXY.start();
+
+                    animX.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                        @Override
+                        public void onAnimationUpdate(ValueAnimator animation) {
+                            faded3.setAlpha(faded3.getAlpha() -.05f);
+                        }
+
+                    });
+
+                    animX.addListener(new Animator.AnimatorListener() {
+                        @Override
+                        public void onAnimationStart(Animator animation) {
+
+                        }
+
+                        @Override
+                        public void onAnimationEnd(Animator animation) {
+                            faded3.setVisibility(View.INVISIBLE);
+                            faded3.animate().scaleX(1f).scaleY(1f).setDuration(100).start();
+
+                        }
+
+                        @Override
+                        public void onAnimationCancel(Animator animation) {
+
+                        }
+
+                        @Override
+                        public void onAnimationRepeat(Animator animation) {
+
+                        }
+                    });
                 }
                 scoretxt.setText("Score: " + score);
                 livestxt.setText("Lives: " + lives);

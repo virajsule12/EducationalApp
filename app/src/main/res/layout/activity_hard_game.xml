@@ -288,5 +288,38 @@
         app:layout_constraintStart_toStartOf="@+id/hardwrong"
         app:layout_constraintTop_toBottomOf="@+id/hardwrong" />
 
+    <ImageView
+        android:id="@+id/fadedh1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/hardbtn1"
+        app:layout_constraintEnd_toEndOf="@+id/hardbtn1"
+        app:layout_constraintStart_toStartOf="@+id/hardbtn1"
+        app:layout_constraintTop_toTopOf="@+id/hardbtn1"
+        app:srcCompat="@drawable/correct" />
+
+    <ImageView
+        android:id="@+id/fadedh2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/hardbtn2"
+        app:layout_constraintEnd_toEndOf="@+id/hardbtn2"
+        app:layout_constraintStart_toStartOf="@+id/hardbtn2"
+        app:layout_constraintTop_toTopOf="@+id/hardbtn2"
+        app:srcCompat="@drawable/correct" />
+
+    <ImageView
+        android:id="@+id/fadedh3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/circleh3"
+        app:layout_constraintEnd_toEndOf="@+id/circleh3"
+        app:layout_constraintStart_toStartOf="@+id/circleh3"
+        app:layout_constraintTop_toTopOf="@+id/circleh3"
+        app:srcCompat="@drawable/correct" />
+
 
 </android.support.constraint.ConstraintLayout>

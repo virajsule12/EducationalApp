@@ -289,5 +289,38 @@
         app:layout_constraintStart_toStartOf="@+id/easywrong"
         app:layout_constraintTop_toBottomOf="@+id/easywrong" />
 
+    <ImageView
+        android:id="@+id/fadede1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/easybtn1"
+        app:layout_constraintEnd_toEndOf="@+id/easybtn1"
+        app:layout_constraintStart_toStartOf="@+id/easybtn1"
+        app:layout_constraintTop_toTopOf="@+id/easybtn1"
+        app:srcCompat="@drawable/correct" />
+
+    <ImageView
+        android:id="@+id/fadede2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/easybtn2"
+        app:layout_constraintEnd_toEndOf="@+id/easybtn2"
+        app:layout_constraintStart_toStartOf="@+id/easybtn2"
+        app:layout_constraintTop_toTopOf="@+id/easybtn2"
+        app:srcCompat="@drawable/correct" />
+
+    <ImageView
+        android:id="@+id/fadede3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/circlee3"
+        app:layout_constraintEnd_toEndOf="@+id/circlee3"
+        app:layout_constraintStart_toStartOf="@+id/circlee3"
+        app:layout_constraintTop_toTopOf="@+id/circlee3"
+        app:srcCompat="@drawable/correct" />
+
 
 </android.support.constraint.ConstraintLayout>

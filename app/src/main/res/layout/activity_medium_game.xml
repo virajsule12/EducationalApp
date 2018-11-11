@@ -291,4 +291,38 @@
         app:layout_constraintTop_toBottomOf="@+id/mediumwrong" />
 
 
+    <ImageView
+        android:id="@+id/fadedm1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/mediumbtn1"
+        app:layout_constraintEnd_toEndOf="@+id/mediumbtn1"
+        app:layout_constraintStart_toStartOf="@+id/mediumbtn1"
+        app:layout_constraintTop_toTopOf="@+id/mediumbtn1"
+        app:srcCompat="@drawable/correct" />
+
+    <ImageView
+        android:id="@+id/fadedm2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/mediumbtn2"
+        app:layout_constraintEnd_toEndOf="@+id/mediumbtn2"
+        app:layout_constraintStart_toStartOf="@+id/mediumbtn2"
+        app:layout_constraintTop_toTopOf="@+id/mediumbtn2"
+        app:srcCompat="@drawable/correct" />
+
+    <ImageView
+        android:id="@+id/fadedm3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/circlem3"
+        app:layout_constraintEnd_toEndOf="@+id/circlem3"
+        app:layout_constraintStart_toStartOf="@+id/circlem3"
+        app:layout_constraintTop_toTopOf="@+id/circlem3"
+        app:srcCompat="@drawable/correct" />
+
+
 </android.support.constraint.ConstraintLayout>
