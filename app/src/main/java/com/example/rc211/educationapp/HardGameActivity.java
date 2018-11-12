@@ -56,7 +56,7 @@ public class HardGameActivity extends AppCompatActivity {
 
         handleButtons();
         handleMenu();
-        handleRestart();
+//        handleRestart();
 
         answers[0] = 0;
         answers[1] = 0;
@@ -76,10 +76,14 @@ public class HardGameActivity extends AppCompatActivity {
         final Button btn2 = (Button) findViewById(R.id.hardbtn2);
         final Button btn3 = (Button) findViewById(R.id.hardbtn3);
 
+        final TextView directions = (TextView) findViewById(R.id.directionh);
+
 
         final Runnable r = new Runnable() {
             public void run() {
                 if (lives > 0) {
+                    directions.setVisibility(View.INVISIBLE);
+
                     btn1.setEnabled(true);
                     btn2.setEnabled(true);
                     btn3.setEnabled(true);
@@ -305,7 +309,7 @@ public class HardGameActivity extends AppCompatActivity {
 
         final TextView gameovertxt = (TextView) findViewById(R.id.hardgo);
         final TextView endScoretxt = (TextView) findViewById(R.id.hardend);
-        final Button restartbtn = (Button) findViewById(R.id.hardrestart);
+//        final Button restartbtn = (Button) findViewById(R.id.hardrestart);
         final Button menuBtn = (Button) findViewById(R.id.hardmenu);
 
         final TextView incorrecttxt = (TextView) findViewById(R.id.hardwrong);
@@ -560,7 +564,7 @@ public class HardGameActivity extends AppCompatActivity {
 
                     endScoretxt.setVisibility(View.VISIBLE);
                     gameovertxt.setVisibility(View.VISIBLE);
-                    restartbtn.setVisibility(View.VISIBLE);
+//                    restartbtn.setVisibility(View.VISIBLE);
                     menuBtn.setVisibility(View.VISIBLE);
 
                     incorrecttxt.setVisibility(View.VISIBLE);
@@ -828,7 +832,7 @@ public class HardGameActivity extends AppCompatActivity {
 
                     endScoretxt.setVisibility(View.VISIBLE);
                     gameovertxt.setVisibility(View.VISIBLE);
-                    restartbtn.setVisibility(View.VISIBLE);
+//                    restartbtn.setVisibility(View.VISIBLE);
                     menuBtn.setVisibility(View.VISIBLE);
 
                     incorrecttxt.setVisibility(View.VISIBLE);
@@ -1094,7 +1098,7 @@ public class HardGameActivity extends AppCompatActivity {
 
                     endScoretxt.setVisibility(View.VISIBLE);
                     gameovertxt.setVisibility(View.VISIBLE);
-                    restartbtn.setVisibility(View.VISIBLE);
+//                    restartbtn.setVisibility(View.VISIBLE);
                     menuBtn.setVisibility(View.VISIBLE);
 
                     incorrecttxt.setVisibility(View.VISIBLE);
@@ -1119,70 +1123,74 @@ public class HardGameActivity extends AppCompatActivity {
         });
     }
 
-    private void handleRestart(){
-        final Button btn1 = (Button) findViewById(R.id.hardbtn1);
-        final Button btn2 = (Button) findViewById(R.id.hardbtn2);
-        final Button btn3 = (Button) findViewById(R.id.hardbtn3);
-
-        final ImageView circle1 = (ImageView) findViewById(R.id.circleh1);
-        final ImageView circle2 = (ImageView) findViewById(R.id.circleh2);
-        final ImageView circle3 = (ImageView) findViewById(R.id.circleh3);
-
-        final TextView scoretxt = (TextView) findViewById(R.id.hardScore);
-        final TextView livestxt = (TextView) findViewById(R.id.hardLives);
-        final TextView equation = (TextView) findViewById(R.id.hEquation);
-
-        final TextView gameovertxt = (TextView) findViewById(R.id.hardgo);
-        final TextView endScoretxt = (TextView) findViewById(R.id.hardend);
-        final Button restartbtn = (Button) findViewById(R.id.hardrestart);
-        final Button menuBtn = (Button) findViewById(R.id.hardmenu);
-
-        final TextView incorrecttxt = (TextView) findViewById(R.id.hardwrong);
-        final TextView correcttxt = (TextView) findViewById(R.id.hardcorrect);
-
-
-        restartbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                circle1.setVisibility(View.VISIBLE);
-                circle2.setVisibility(View.VISIBLE);
-                circle3.setVisibility(View.VISIBLE);
-
-                scoretxt.setVisibility(View.VISIBLE);
-                livestxt.setVisibility(View.VISIBLE);
-                equation.setVisibility(View.VISIBLE);
-
-                gameovertxt.setVisibility(View.INVISIBLE);
-                endScoretxt.setVisibility(View.INVISIBLE);
-                menuBtn.setVisibility(View.INVISIBLE);
-                restartbtn.setVisibility(View.INVISIBLE);
-
-                incorrecttxt.setVisibility(View.INVISIBLE);
-                correcttxt.setVisibility(View.INVISIBLE);
-
-                gameOver = false;
-
-                score = 0;
-                lives = 3;
-
-                num1wrongArr.clear();
-                num2wrongArr.clear();
-                incorrectansArr.clear();
-                correctansArr.clear();
-                operatorArr.clear();
-
-                scoretxt.setText("Score: " + score);
-                livestxt.setText("Lives: " + lives);
-                equation.setText("");
-
-                circle1.setImageResource(R.drawable.circle);
-                circle2.setImageResource(R.drawable.circle);
-                circle3.setImageResource(R.drawable.circle);
-
-                moveAnswers();
-            }
-        });
-    }
+//    private void handleRestart(){
+//        final Button btn1 = (Button) findViewById(R.id.hardbtn1);
+//        final Button btn2 = (Button) findViewById(R.id.hardbtn2);
+//        final Button btn3 = (Button) findViewById(R.id.hardbtn3);
+//
+//        final ImageView circle1 = (ImageView) findViewById(R.id.circleh1);
+//        final ImageView circle2 = (ImageView) findViewById(R.id.circleh2);
+//        final ImageView circle3 = (ImageView) findViewById(R.id.circleh3);
+//
+//        final TextView scoretxt = (TextView) findViewById(R.id.hardScore);
+//        final TextView livestxt = (TextView) findViewById(R.id.hardLives);
+//        final TextView equation = (TextView) findViewById(R.id.hEquation);
+//
+//        final TextView gameovertxt = (TextView) findViewById(R.id.hardgo);
+//        final TextView endScoretxt = (TextView) findViewById(R.id.hardend);
+//        final Button restartbtn = (Button) findViewById(R.id.hardrestart);
+//        final Button menuBtn = (Button) findViewById(R.id.hardmenu);
+//
+//        final TextView incorrecttxt = (TextView) findViewById(R.id.hardwrong);
+//        final TextView correcttxt = (TextView) findViewById(R.id.hardcorrect);
+//
+//        final TextView directions = (TextView) findViewById(R.id.directionh);
+//
+//
+//        restartbtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                circle1.setVisibility(View.VISIBLE);
+//                circle2.setVisibility(View.VISIBLE);
+//                circle3.setVisibility(View.VISIBLE);
+//
+//                scoretxt.setVisibility(View.VISIBLE);
+//                livestxt.setVisibility(View.VISIBLE);
+//                equation.setVisibility(View.VISIBLE);
+//
+//                gameovertxt.setVisibility(View.INVISIBLE);
+//                endScoretxt.setVisibility(View.INVISIBLE);
+//                menuBtn.setVisibility(View.INVISIBLE);
+//                restartbtn.setVisibility(View.INVISIBLE);
+//
+//                incorrecttxt.setVisibility(View.INVISIBLE);
+//                correcttxt.setVisibility(View.INVISIBLE);
+//
+//                directions.setVisibility(View.VISIBLE);
+//
+//                gameOver = false;
+//
+//                score = 0;
+//                lives = 3;
+//
+//                num1wrongArr.clear();
+//                num2wrongArr.clear();
+//                incorrectansArr.clear();
+//                correctansArr.clear();
+//                operatorArr.clear();
+//
+//                scoretxt.setText("Score: " + score);
+//                livestxt.setText("Lives: " + lives);
+//                equation.setText("");
+//
+//                circle1.setImageResource(R.drawable.circle);
+//                circle2.setImageResource(R.drawable.circle);
+//                circle3.setImageResource(R.drawable.circle);
+//
+//                moveAnswers();
+//            }
+//        });
+//    }
 
     private void handleMenu(){
         Button menuBtn = (Button) findViewById(R.id.hardmenu);

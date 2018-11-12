@@ -195,7 +195,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/mediumrestart"
+        android:id="@+id/mediummenu"
         android:layout_width="294dp"
         android:layout_height="90dp"
         android:layout_marginEnd="8dp"
@@ -204,7 +204,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/circle"
-        android:text="Restart"
+        android:text="Main Menu"
         android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -224,9 +224,9 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="@+id/mediumrestart"
+        app:layout_constraintEnd_toEndOf="@+id/mediummenu"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/mediumrestart"
+        app:layout_constraintStart_toStartOf="@+id/mediummenu"
         app:layout_constraintTop_toBottomOf="@+id/mediumgo" />
 
     <TextView
@@ -244,20 +244,20 @@
         app:layout_constraintStart_toStartOf="@+id/mediumend"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/mediummenu"
-        android:layout_width="0dp"
-        android:layout_height="90dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/circle"
-        android:text="Main Menu"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="@+id/mediumrestart"
-        app:layout_constraintStart_toStartOf="@+id/mediumrestart"
-        app:layout_constraintTop_toBottomOf="@+id/mediumrestart" />
+    <!--<Button-->
+        <!--android:id="@+id/mediummen"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="90dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:background="@drawable/circle"-->
+        <!--android:text="Main Menu"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:textSize="30sp"-->
+        <!--android:textStyle="bold"-->
+        <!--android:visibility="invisible"-->
+        <!--app:layout_constraintEnd_toEndOf="@+id/mediumrestart"-->
+        <!--app:layout_constraintStart_toStartOf="@+id/mediumrestart"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/mediumrestart" />-->
 
     <TextView
         android:id="@+id/mediumwrong"
@@ -323,6 +323,28 @@
         app:layout_constraintStart_toStartOf="@+id/circlem3"
         app:layout_constraintTop_toTopOf="@+id/circlem3"
         app:srcCompat="@drawable/correct" />
+
+    <TextView
+        android:id="@+id/directionm"
+        android:layout_width="322dp"
+        android:layout_height="134dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/easydirections"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Press the correct answer when it is in the bubble!"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>
