@@ -1,3 +1,3 @@
 # EducationalApp
 
-Educational App with amazing user interface 
+Educational App with amazing user interface and functionality.
